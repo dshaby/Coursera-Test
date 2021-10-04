@@ -34,11 +34,12 @@ font-style: italic;
 
 #nav-list {/*the 'box' surrounding menu items list inside toggle button*/
     border: 1px solid #183444;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #nav-list a {/*Each dish inside toggle button*/
     background-color: #d8e4e4;
-    text-align: center;
     color: #183444;
 }
 #nav-list a:hover{
