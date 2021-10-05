@@ -2,7 +2,7 @@
 #header-nav { /*green background area*/
     background-color: #408c8c;
     border-radius: 0;
-    border: 0px;
+    border: 0;
     padding-bottom: 30px;
 }
 .navbar-brand h1 {/*Company Name*/
@@ -21,6 +21,7 @@ font-style: italic;
 .navbar-header button.navbar-toggle {/*Menu Button*/
     clear: both;
     margin-top: -25px;
+    margin-bottom: -25px;
     background: #d8e4e4;
     border: 1px solid #183444;
 }
@@ -31,11 +32,14 @@ font-style: italic;
 .navbar-header .icon-bar {/*Lines inside Menu Button*/
     border: 1px solid #183444;
 }
+#collapse-my-nav-baby { /*container for #nav-list*/
+    border:none; /*removing white line*/
+    margin-bottom: -20px;
+    margin-top: 15px;
 
+}
 #nav-list {/*the 'box' surrounding menu items list inside toggle button*/
-    border: 1px solid #183444;
-    padding-left: 5px;
-    padding-right: 5px;
+    border: 1px 0 1px 0 solid #183444;
 }
 
 #nav-list a {/*Each dish inside toggle button*/
@@ -52,12 +56,19 @@ ul.separator li {/*horizontal line between menu items list inside toggle button*
 /* END HEADER */
 
 /* MAIN CONTENT */
-.container .dishes {/*Dishes on the page*/
-    height: 1000px;
-    background-color: #A8Dcc4;
+.dishes {/*Dishes on the page*/
     margin-top: 10px;
-    
+    background-color: #A8Dcc4;
+    padding: 10px;
 }
+.dishes h3 {/*Dish titles*/
+    color: #183444;
+}
+#random-text {
+    /* height: 1000px; */
+    /* height:40vw; */
+}
+
 /* END MAIN CONTENT */
 
 /* DESKTOP & TABLET */
@@ -68,10 +79,35 @@ ul.separator li {/*horizontal line between menu items list inside toggle button*
 }
 /* DESKTOP & TABLET END */
 
+/* DESKTOP ONLY */
+@media (min-width:1200px){
+    #random-text{
+        height: 80vw;
+    }
+}
+@media (min-width:992px) and (max-width:1199px) {
+    #random-text{
+        height: 83vw;
+    }
+}
+/* DESKTOP ONLY END */
+
+/* TABLET ONLY */
+@media (min-width:768px) and (max-width:991px) {
+    #random-text {
+        height: 60vw;
+    }
+}
+/* TABLET ONLY END */
+
 /* MOBILE ONLY */
 @media (max-width:768px){
     section.row{
         margin-left: 30px;
         margin-right: 30px;
     }
+    #random-text{
+        height: 120vw;
+    }
 }
+/* MOBILE ONLY END */
